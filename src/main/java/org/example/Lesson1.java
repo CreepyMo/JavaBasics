@@ -19,7 +19,7 @@ public class Lesson1 {
         // Do this twice: first using string concatenation (+) and second using printf.
     }
 
-    // Task 2: Convert string input to integer and double
+    // Task 2: Convert string to integer and double
     public static void task2() {
         String firstNumber = "25";
         String secondNumber = "3.14";
@@ -30,7 +30,7 @@ public class Lesson1 {
 
     // Task 5: Arithmetic operations
     public static void task3() {
-       // Declare two integer variables and print their sum, difference, and product (multiplication).
+       // Initialize two integer variables and print their sum, difference, and product (multiplication).
     }
 
     // Task 3: Simple arithmetic with user input
