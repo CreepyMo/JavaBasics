@@ -16,7 +16,17 @@ public class Lesson1 {
         // Step 1. Declare String variables for a favorite hobby, a favorite food, and a dream destination.
         // Step 2. Print following sentence that use these variables:
         // "My favorite hobby is [hobby], and I love eating [food]. One day, I want to visit [destination]!"
+
+        String hobby = "knitting";
+        String food = "crapes";
+        String destination = "Japan";
+
+        System.out.println("My favorite hobby is " + hobby + ", and I love eating " + food + ". One day, I want to visit " + destination + "!");
         // Do this twice: first using string concatenation (+) and second using printf.
+        /*Format Specifiers - begin with a % and are followed by a character that indicates the data type of the argument:
+        %s: String, %d: Integer, %f: Floating-point number, %c: Character, %b: Boolean, %n: Newline, and %%: Literal .*/
+        System.out.println("===============Format Specifiers=============");
+        System.out.printf("My favorite hobby is %s, and I love eating %s. One day, I want to visit %s!", "rock-climbing", "borsch", "Europe");
     }
 
     // Task 2: Convert string to integer and double
