@@ -101,6 +101,7 @@ public class Lesson1 {
         smallNumber++;
         int intNum = smallNumber;
         System.out.println("The value of smallNumber is: " + intNum);
+        // changed byte to int NK
         // Why is the output -128? Fix this using a different data type.
 
 
