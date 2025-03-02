@@ -44,7 +44,9 @@ release.properties
 # Gradle specific files
 .gradle/
 build/
-.idea
+.idea/
+.DS_Store
+
 
 # Temporary files
 *.swp
