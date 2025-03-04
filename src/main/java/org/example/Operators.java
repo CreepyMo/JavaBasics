@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Operators {
 
     public static void main(String[] args) {
-        selfDestructCountdown();
-//        securityCheck();
+//        selfDestructCountdown();
+        securityCheck();
 //        averageCalculator();
     }
 
@@ -66,12 +66,15 @@ public class Operators {
         System.out.print("Confirm (yes/no): ");
         String confirm = scanner.nextLine();
 
-        if (password.equals("admin") || confirm.equals("yes")) {
+        if (password.equals("admin") && confirm.equals("yes")) {
             System.out.println("✅ Access Granted!");
         } else {
             System.out.println("❌ Access Denied!");
         }
+        /* Natasha
+         * changed || (OR) to && (AND)*/
     }
+
 
     static void averageCalculator() {
         /*
@@ -91,7 +94,16 @@ public class Operators {
         System.out.print("Enter second number: ");
         int b = scanner.nextInt();
 
-        double average = (a + b) / 2;
+        double average = (double) (a + b) / 2;
         System.out.println("📊 Average: " + average);
+        /*Natasha
+        * (Claude) I've added a cast to double before the division,
+        * which ensures floating-point division instead of integer division.
+        * This preserves the decimal part of the result.
+        *
+        * Also, there are alternative ways to fix this issue:
+        *
+        * 1. Use a floating-point literal for the divisor: (a + b) / 2.0
+        * 2. Cast one of the operands in the sum: ((double)a + b) / 2*/
     }
 }

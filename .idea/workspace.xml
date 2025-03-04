@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf0878ec-c9f6-41a9-b287-748752d4cc73" name="Changes" comment="completed Task 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Operators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Operators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
     "Application.Operators.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "NK__branch1",
+    "git-widget-placeholder": "NK__lesson2.2",
     "kotlin-language-version-configured": "true"
   },
   "keyToStringList": {
