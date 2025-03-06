@@ -1,8 +1,82 @@
 package org.example;
 
 public class Calculator {
+    // define four methods using `public static`
+    public static int add (int a, int b)
+    {
+        int result = a + b;
+        return result;
+    }
 
+    public static int substract(int a, int b)
+    {
+        int result = a - b;
+        return result;
+    }
+
+    public static int multiply(int a, int b)
+    {
+        int result = a * b;
+        return result;
+    }
+
+    public static String divide(int a, int b)
+    {
+        // if `b == 0`, return `"Error: Cannot divide by zero!"`
+        if (b == 0)
+        {
+            return "Error: cannot divide by zero!";
+        }
+
+        // use FLOAT in case if division will end up with decimal number
+        float result = a / b;
+        String strNumber = Float.toString(result);
+        return strNumber;
+    }
     public static void main(String[] args) {
+
+
+        while (true)
+        {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("\nEnter first number: ");
+            int a = scanner.nextInt();
+            //boolean exit = scanner.nextBoolean();
+
+            System.out.print("Enter second number: ");
+            int b = scanner.nextInt();
+
+            System.out.print("Choose operation like +, -, *, / ");
+            String operation = scanner.next();
+
+            if (operation.equals("+"))
+            {
+                System.out.println("Result: " + a + " + " + b + " = " + add(a, b));
+            }
+            else if (operation.equals("-"))
+            {
+                System.out.println("Result: " + a + " - " + b + " = " + substract(a, b));
+            }
+            else if (operation.equals("*"))
+            {
+                System.out.println("Result: " + a + " * " + b + " = " + multiply(a, b));
+            }
+            else if (operation.equals("/"))
+            {
+                System.out.println("Result: " + a + " / " + b + " = " + divide(a, b));
+            }
+
+            /*
+             * if (exit) { break; }
+             */
+
+            //scanner.close();
+        }
+    }
+
+}
+
         /**
          * Task: Create a Simple Calculator in Java
 
@@ -63,5 +137,5 @@ public class Calculator {
          * - Use `switch (operation)` or `if-else` to handle operations.
          * - Close the `Scanner` when done: `scanner.close();`
          */
-    }
-}
+
+
