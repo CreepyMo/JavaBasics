@@ -1,77 +1,67 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Calculator {
-    // define four methods using `public static`
+    // removed variable and added the action to return
     public static int add (int a, int b)
     {
-        int result = a + b;
-        return result;
+        return a + b;
     }
 
-    public static int substract(int a, int b)
+    public static int subtract(int a, int b)
     {
-        int result = a - b;
-        return result;
+        return a - b;
     }
 
     public static int multiply(int a, int b)
     {
-        int result = a * b;
-        return result;
+        return a * b;
     }
 
-    public static String divide(int a, int b)
-    {
-        // if `b == 0`, return `"Error: Cannot divide by zero!"`
-        if (b == 0)
-        {
-            return "Error: cannot divide by zero!";
-        }
-
-        // use FLOAT in case if division will end up with decimal number
-        float result = a / b;
-        String strNumber = Float.toString(result);
-        return strNumber;
+    public static double divide(int a, int b)
+    { // changed type to Double, and put the operation into return, also ignoring the muliply by 0 for now
+        return (double) a / (double) b;
     }
+
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in); // moved Scanner outside of While loop to let program run faster
 
         while (true)
         {
-            Scanner scanner = new Scanner(System.in);
-
             System.out.print("\nEnter first number: ");
-            int a = scanner.nextInt();
-            //boolean exit = scanner.nextBoolean();
+            String aStr = scanner.next(); // added string variable for input because we want user to be able to enter 'exit' at any moment
+            int a; // declared variable a to use it within this While loop and inside the IF
+            if (aStr.equals("exit"))
+            {
+                break;
+            }
+            else
+            {
+                a = Integer.parseInt(aStr);
+            }
 
             System.out.print("Enter second number: ");
-            int b = scanner.nextInt();
+            String bStr = scanner.next();// same as for a variable
+            int b;
+            if (bStr.equals("exit")) {
+                break;
+            }
+            else {
+                b = Integer.parseInt(bStr);
+            }
 
-            System.out.print("Choose operation like +, -, *, / ");
+            System.out.print("Choose operation like +, -, *, /: ");
             String operation = scanner.next();
 
-            if (operation.equals("+"))
-            {
-                System.out.println("Result: " + a + " + " + b + " = " + add(a, b));
-            }
-            else if (operation.equals("-"))
-            {
-                System.out.println("Result: " + a + " - " + b + " = " + substract(a, b));
-            }
-            else if (operation.equals("*"))
-            {
-                System.out.println("Result: " + a + " * " + b + " = " + multiply(a, b));
-            }
-            else if (operation.equals("/"))
-            {
-                System.out.println("Result: " + a + " / " + b + " = " + divide(a, b));
+            switch (operation) { //replaced IF with SWITCH
+                case "+" -> System.out.println("Result: " + a + " + " + b + " = " + add(a, b));
+                case "-" -> System.out.println("Result: " + a + " - " + b + " = " + subtract(a, b));
+                case "*" -> System.out.println("Result: " + a + " * " + b + " = " + multiply(a, b));
+                case "/" -> System.out.println("Result: " + a + " / " + b + " = " + divide(a, b));
             }
 
-            /*
-             * if (exit) { break; }
-             */
-
-            //scanner.close();
+            scanner.close();
         }
     }
 
