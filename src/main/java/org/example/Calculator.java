@@ -1,8 +1,72 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Calculator {
+    // removed variable and added the action to return
+    public static int add (int a, int b)
+    {
+        return a + b;
+    }
+
+    public static int subtract(int a, int b)
+    {
+        return a - b;
+    }
+
+    public static int multiply(int a, int b)
+    {
+        return a * b;
+    }
+
+    public static double divide(int a, int b)
+    { // changed type to Double, and put the operation into return, also ignoring the muliply by 0 for now
+        return (double) a / (double) b;
+    }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // moved Scanner outside of While loop to let program run faster
+
+        while (true)
+        {
+            System.out.print("\nEnter first number: ");
+            String aStr = scanner.next(); // added string variable for input because we want user to be able to enter 'exit' at any moment
+            int a; // declared variable a to use it within this While loop and inside the IF
+            if (aStr.equals("exit"))
+            {
+                break;
+            }
+            else
+            {
+                a = Integer.parseInt(aStr);
+            }
+
+            System.out.print("Enter second number: ");
+            String bStr = scanner.next();// same as for a variable
+            int b;
+            if (bStr.equals("exit")) {
+                break;
+            }
+            else {
+                b = Integer.parseInt(bStr);
+            }
+
+            System.out.print("Choose operation like +, -, *, /: ");
+            String operation = scanner.next();
+
+            switch (operation) { //replaced IF with SWITCH
+                case "+" -> System.out.println("Result: " + a + " + " + b + " = " + add(a, b));
+                case "-" -> System.out.println("Result: " + a + " - " + b + " = " + subtract(a, b));
+                case "*" -> System.out.println("Result: " + a + " * " + b + " = " + multiply(a, b));
+                case "/" -> System.out.println("Result: " + a + " / " + b + " = " + divide(a, b));
+            }
+
+            scanner.close();
+        }
+    }
+
+}
+
         /**
          * Task: Create a Simple Calculator in Java
 
@@ -63,5 +127,5 @@ public class Calculator {
          * - Use `switch (operation)` or `if-else` to handle operations.
          * - Close the `Scanner` when done: `scanner.close();`
          */
-    }
-}
+
+

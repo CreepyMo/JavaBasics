@@ -1,12 +1,12 @@
 package org.example;
-
+import org.example.Operators;
 import java.util.Scanner;
 
 public class Operators {
 
     public static void main(String[] args) {
 //        selfDestructCountdown();
-//        securityCheck();
+        securityCheck();
 //        averageCalculator();
     }
 
@@ -31,11 +31,19 @@ public class Operators {
         int countdown = scanner.nextInt();
 
         while (countdown > 0) {
-            System.out.println("💥 Detonation in: " + --countdown + " seconds");
-        }
+            System.out.println("💥 Detonation in: " + countdown + " seconds");
+            countdown--;        }
 
         System.out.println("💣 BOOM!");
+        /*NATASHA
+        * could not make the output "5, 4, 3, 2, 1, BOOM!"
+        * Also having this error while running this code (had to run it on online editor
+        * =====================
+        * Error: Could not find or load main class org.example.Operators
+        * Caused by: java.lang.ClassNotFoundException: org.example.Operators
+        * =========================*/
     }
+    // === Working with Git only ===
 
     static void securityCheck() {
         /* 🚀 Fix the Security Check!
@@ -58,12 +66,15 @@ public class Operators {
         System.out.print("Confirm (yes/no): ");
         String confirm = scanner.nextLine();
 
-        if (password.equals("admin") || confirm.equals("yes")) {
+        if (password.equals("admin") && confirm.equals("yes")) {
             System.out.println("✅ Access Granted!");
         } else {
             System.out.println("❌ Access Denied!");
         }
+        /* Natasha
+         * changed || (OR) to && (AND)*/
     }
+
 
     static void averageCalculator() {
         /*
@@ -83,7 +94,16 @@ public class Operators {
         System.out.print("Enter second number: ");
         int b = scanner.nextInt();
 
-        double average = (a + b) / 2;
+        double average = (double) (a + b) / 2;
         System.out.println("📊 Average: " + average);
+        /*Natasha
+        * (Claude) I've added a cast to double before the division,
+        * which ensures floating-point division instead of integer division.
+        * This preserves the decimal part of the result.
+        *
+        * Also, there are alternative ways to fix this issue:
+        *
+        * 1. Use a floating-point literal for the divisor: (a + b) / 2.0
+        * 2. Cast one of the operands in the sum: ((double)a + b) / 2*/
     }
 }
