@@ -3,7 +3,8 @@ package org.example.strings;
 public class CreateGreeting {
 
     public static void main(String[] args) {
-        System.out.println(createGreeting("Natalia")); // Hello, Natalia should be printed to console
+        //System.out.println(createGreeting("Natalia")); // Hello, Natalia should be printed to console
+        writeGreeting();
     }
 
     /**
@@ -19,6 +20,11 @@ public class CreateGreeting {
      createGreeting('Natalia'); // Hello, Natalia
      createGreeting('Stas'); // Hello, Stas
      */
+    public static void writeGreeting(){
+        StringBuilder builder = new StringBuilder("Hello, ");
+        builder.append("Natalia");
+        System.out.println(builder);
+    }
     public static String createGreeting(String input) {
         StringBuilder builder = new StringBuilder("Hello, ");
         builder.append(input);
