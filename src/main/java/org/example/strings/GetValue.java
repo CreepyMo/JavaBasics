@@ -3,7 +3,7 @@ package org.example.strings;
 public class GetValue {
 
     public static void main(String[] args) {
-        System.out.println(getValue("name=MaRyJaNE"));
+        System.out.println(getValue("name=MaRyJaNE")); // maryjane should be printed to console
     }
 
     /**

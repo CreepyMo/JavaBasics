@@ -3,7 +3,7 @@ package org.example.strings;
 public class CombineStrings {
 
     public static void main(String[] args) {
-        System.out.println(combineStrings("Hello ", "World!"));
+        System.out.println(combineStrings("Hello ", "World!")); // Hello, World! should be printed to console
     }
 
     /**
@@ -12,7 +12,8 @@ public class CombineStrings {
      Return the new string as a result. Use the StringBuilder class to concatenate the strings.
      */
     public static String combineStrings(String one, String two) {
-
-        return ""; // return actual result instead of an empty string
+        // Create StringBuilder object for string 'one'
+        // Append string 'two'
+        return ""; // Return String representation of StringBuilder Object
     }
 }
