@@ -21,6 +21,10 @@ public class IsWerewolf {
 
      */
     public static boolean isWerewolf(String target) {
-        return false;
+        StringBuilder word = new StringBuilder(target);
+        StringBuilder revWord = word.reverse();
+        boolean isMatching = word == revWord;
+
+        return true;
     }
 }

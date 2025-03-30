@@ -3,8 +3,8 @@ package org.example.strings;
 public class CreateGreeting {
 
     public static void main(String[] args) {
-        //System.out.println(createGreeting("Natalia")); // Hello, Natalia should be printed to console
-        writeGreeting();
+        System.out.println(createGreeting("Natalia")); // Hello, Natalia should be printed to console
+        //writeGreeting();
     }
 
     /**
@@ -28,6 +28,6 @@ public class CreateGreeting {
     public static String createGreeting(String input) {
         StringBuilder builder = new StringBuilder("Hello, ");
         builder.append(input);
-        return ""; // change this line
+        return builder.toString(); // change this line
     }
 }
