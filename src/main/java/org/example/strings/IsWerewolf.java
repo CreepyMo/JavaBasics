@@ -23,8 +23,8 @@ public class IsWerewolf {
     public static boolean isWerewolf(String target) {
         StringBuilder word = new StringBuilder(target);
         StringBuilder revWord = word.reverse();
-        boolean isMatching = word == revWord;
+        boolean isMatching = word.equals(revWord);
 
-        return true;
+        return isMatching;
     }
 }
