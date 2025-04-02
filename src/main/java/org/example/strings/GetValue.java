@@ -30,9 +30,9 @@ public class GetValue {
      */
     public static String getValue(String dataFromDataBase) {
         // write your code here
-        String str = "name=MaRyJaNE";
-        int indexOfEquals = str.indexOf("=");
-        String partOfIt = str.substring(5);
+        int indexOfEquals = dataFromDataBase.indexOf("=");
+        int nextIndex = indexOfEquals + 1;
+        String partOfIt = dataFromDataBase.substring(nextIndex);
         String strLowerCase = partOfIt.toLowerCase();
 
         return strLowerCase; // return your result instead of an empty string
