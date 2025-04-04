@@ -32,7 +32,26 @@ public class AllWaitersLoveTips {
      */
 
     public static void main(String[] args) {
-
+        System.out.println(getTipsRating(27));
+    }
+    public static String getTipsRating(int tip){
+        String response = "";
+        if (tip == 0){
+             response = "terrible";
+        }
+        else if (tip >= 51){
+            response = "excellent";
+        }
+        else if (tip >= 21){
+            response = "great";
+        }
+        else if (tip >= 11){
+            response = "good";
+        }
+        else if (tip >= 1){
+            response = "poor";
+        }
+        return response;
     }
 
 
