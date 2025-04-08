@@ -43,7 +43,7 @@ public class GetLargestExpressionResult {
             biggest = sum;
         } else {
             biggest = minus;
-        }gi
+        }
         if (biggest < mult){
             biggest = mult;
         }
