@@ -1,5 +1,4 @@
 public class GetLargestExpressionResult {
-
     /**
      In this practical task, you will work with the if operator.
      We have created a method called getResult().
@@ -29,13 +28,28 @@ public class GetLargestExpressionResult {
      Hint 2:
      Reassign the value of the double variable if the next operation gives a greater result than the current value.
      */
-
     public static void main(String[] args) {
-//        System.out.println(getResult(2, 4));
+        System.out.println(getResult(-2, -5));
     }
 
     public static double getResult(double a, double b) {
         // write your code here
-        return 0.0; // return actual result instead of 0.0
+        double sum = a + b;
+        double minus = a - b;
+        double mult = a * b;
+        double division = a / b;
+        double biggest = 0;
+        if (sum > minus){
+            biggest = sum;
+        } else {
+            biggest = minus;
+        }
+        if (biggest < mult){
+            biggest = mult;
+        }
+        if (biggest < division) {
+            biggest = division;
+        }
+        return biggest; // return actual result instead of 0.0
     }
 }
