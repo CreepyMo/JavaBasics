@@ -13,12 +13,13 @@ public class IndexOutOfBoundExceptionExample {
      */
 
     public static void main(String[] args) {
+
         System.out.println(Arrays.toString(createArray()));
     }
 
     public static String[] createArray() {
         //change code below this line
-        String[] fruits = new String[2];
+        String[] fruits = new String[3];
         fruits[2] = "lemon";
         //change code above this line
 
