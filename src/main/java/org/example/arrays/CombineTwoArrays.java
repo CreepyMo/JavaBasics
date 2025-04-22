@@ -31,6 +31,20 @@ public class CombineTwoArrays {
 
     public static int[] getCombinedArray(int[] firstArray, int[] secondArray)
     {
-        return new int[0]; // return actual result instead of an empty array
+        //  Step 1: Calculate the size of the final (combined) array
+        int combinedArrays = firstArray.length + secondArray.length;
+        // Step 2: Create a new empty array using the size you calculated
+        int[] result = new int[combinedArrays];
+        // Step 3: Use a for loop to copy elements from the first array into the result array, starting from index 0
+        for (int i = 0; i < firstArray.length; i++ ) {
+            result[i] = firstArray[i];
+        }
+        // Step 4: Then, use another for loop to copy elements from the second array, starting from where you left off in the result array
+        for (int j = 0; j < secondArray.length; j++ ){
+            result[j + firstArray.length]= secondArray[j];
+            // the part [j + firstArray.length] was really hard to understand
+            // made mistake in step 2 > but when Borya pointed out that the array has to be empty > was able to fix it right away
+        }
+        return result; // return actual result instead of an empty array
     }
 }
