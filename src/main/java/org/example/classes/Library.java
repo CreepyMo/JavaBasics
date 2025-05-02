@@ -13,7 +13,12 @@ public class Library {
         book1.displayInfo();
         book1.borrowBook();
         book1.returnBook();
-        book1.estimateReadingTime(book1.pages);
+        int hours = book1.estimateReadingTime(55);
+        System.out.printf("The book will take %s to finish.", hours);
+        // also can be done without declaring method, only writing one line here
+        // which is reducing amount of code in whole project
+        //System.out.printf("\n2. The book will take %s to finish.", book1.pages / 55);
+
 
     }
 }

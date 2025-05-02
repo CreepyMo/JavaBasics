@@ -15,20 +15,23 @@ public class Book {
 
     }
     public void borrowBook(){
-        if (isAvailable == false){
+        if (isAvailable){ //simplified (isAvailable == false)
             System.out.println("You borrowed the book.");
+            isAvailable = false;
+        } else {
+            System.out.println("The book is not available.");
         }
     }
     public void returnBook(){
-        if (isAvailable == true){
+        if (!isAvailable){//simplified (isAvailable == true)
             System.out.println("You returned the book.");
+            isAvailable = true;
+        } else {
+            System.out.println("The book have not been taken.");
         }
     }
-    public String estimateReadingTime(int pagesPerHour){
-        pagesPerHour = 2 * pages;
-        String message = "To read this book will take " + pagesPerHour + " hours.";
-        System.out.println(message);
-        return message;
+    public int estimateReadingTime(int pagesPerHour){
+        return pages / pagesPerHour;
     }
 
 }
