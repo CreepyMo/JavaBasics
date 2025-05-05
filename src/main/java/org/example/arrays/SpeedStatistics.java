@@ -33,10 +33,25 @@ public class SpeedStatistics {
      */
 
     public static void main(String[] args) {
-//        System.out.println(Arrays.toString(getSpeedStatistic(new int[]{1, 2, 100, 2})));
+        System.out.println(Arrays.toString(getSpeedStatistic(new int[]{1, 2, 100, 2})));
     }
 
     public static int[] getSpeedStatistic(int[] results) {
+        int[] lengthOfSpeedStatistic = new int[2];
+        int minSpeed = Integer.MAX_VALUE;
+        int maxSpeed = Integer.MIN_VALUE;
+        for (int speed : lengthOfSpeedStatistic){
+            if (speed < minSpeed) {
+                minSpeed = speed;
+            }
+            lengthOfSpeedStatistic[0] = minSpeed;
+        }
+        for (int speed2 : lengthOfSpeedStatistic) {
+            if (speed2 > maxSpeed) {
+                maxSpeed = speed2;
+            }
+            lengthOfSpeedStatistic[1] = maxSpeed;
+        }
         return new int[]{0, 0}; // return actual result here
     }
 }
