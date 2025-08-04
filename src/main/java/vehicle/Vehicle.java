@@ -2,10 +2,10 @@ package vehicle;
 
 public class Vehicle {
 
-    String make;
-    String model;
-    int year;
-    String color;
+    private String make;
+    private String model;
+    private int year;
+    private String color;
 
     // Default constructor
     public Vehicle(){

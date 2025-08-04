@@ -2,8 +2,8 @@ package vehicle;
 
 public class Car extends Vehicle{
 
-    int numberOfDoors;
-    boolean isElectric;
+    private int numberOfDoors;
+    private boolean isElectric;
 
     //Constructor that takes all fields and uses super()
     public Car(String make, String model, int year, String color, int numberOfDoors, boolean isElectric){
@@ -13,9 +13,10 @@ public class Car extends Vehicle{
     }
 
     // Constructor with only make, model and year
-    // ?? -- not sure if local variables have to be added -- NK
     public Car(String make, String model, int year){
         super(make, model, year, ""); // provide default color
+        this.numberOfDoors = 4; // default value
+        this.isElectric = false; // default value
     }
 
     public int getNumberOfDoors(){
@@ -36,7 +37,7 @@ public class Car extends Vehicle{
 
     @Override
     public void start(){
-        if (isElectric = true){
+        if (isElectric == true){
             System.out.println("Car is starting silently...");
         } else {
             System.out.println("Car is starting with key...");
@@ -45,13 +46,14 @@ public class Car extends Vehicle{
 
     //A method displayInfo() that prints all car info in a human readable manner
     public void displayInfo(){
-        System.out.println("Car Information:");
+        System.out.println("Car Info:");
         System.out.println("Make: " + getMake());
         System.out.println("Model: " + getModel());
         System.out.println("Year: " + getYear());
         System.out.println("Color: " + getColor());
-        System.out.println("Number of doors: " + getNumberOfDoors());
-        System.out.println("Car is electric: " + (isElectric? "Yes" : "No"));
+        System.out.println("Number of Doors: " + getNumberOfDoors());
+        System.out.println("Electric: " + (isElectric? "Yes" : "No"));
+        System.out.println();
     }
 
     // Over load method drive()
