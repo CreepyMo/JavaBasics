@@ -14,9 +14,9 @@ public class Car extends Vehicle{
 
     // Constructor with only make, model and year
     public Car(String make, String model, int year){
-        super(make, model, year, ""); // provide default color
-        this.numberOfDoors = 4; // default value
-        this.isElectric = false; // default value
+        setMake(make);
+        setModel(model);
+        setYear(year);
     }
 
     public int getNumberOfDoors(){
@@ -46,6 +46,8 @@ public class Car extends Vehicle{
 
     //A method displayInfo() that prints all car info in a human readable manner
     public void displayInfo(){
+        System.out.println();
+        System.out.println("::::::::::::::::::::::::::::::::::::::::");
         System.out.println("Car Info:");
         System.out.println("Make: " + getMake());
         System.out.println("Model: " + getModel());

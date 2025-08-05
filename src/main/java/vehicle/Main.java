@@ -18,7 +18,7 @@ public class Main {
         c1.displayInfo();
         c1.start();
         c1.drive();
-        c1.drive(80);
+        c1.drive(70);
 
         c2.displayInfo();
         c2.start();

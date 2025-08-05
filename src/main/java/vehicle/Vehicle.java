@@ -8,12 +8,7 @@ public class Vehicle {
     private String color;
 
     // Default constructor
-    public Vehicle(){
-        this.make = "";
-        this.model = "";
-        this.year = 0;
-        this.color = "";
-    }
+    public Vehicle(){}
 
     // Parameterized constructor
     public Vehicle(String make, String model, int year, String color){
@@ -23,7 +18,7 @@ public class Vehicle {
         this.color = color;
     }
 
-    // Getters and Setters for the all fields
+    // Getters and Setters for the make
     public String getMake(){
         return make;
     }
@@ -32,14 +27,14 @@ public class Vehicle {
         this.make = make;
     }
 
-    public String getModel(){
-        return model;
-    }
+    // Getters and Setters for the model
+    public String getModel(){return model;}
 
     public void setModel(String model){
         this.model = model;
     }
 
+    // Getters and Setters for the year
     public int getYear(){
         return year;
     }
@@ -48,6 +43,7 @@ public class Vehicle {
         this.year = year;
     }
 
+    // Getters and Setters for the color
     public String getColor(){
         return color;
     }
@@ -56,6 +52,7 @@ public class Vehicle {
         this.color = color;
     }
 
+    // method start()
     public void start(){
         System.out.println("Vehicle is starting...");
     }
